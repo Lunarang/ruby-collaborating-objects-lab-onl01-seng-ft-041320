@@ -21,8 +21,7 @@ class Artist
   end
   
   def self.find_or_create_by_name (name)
-    artist = @@all.find {|artist| artist == name}
-    if artist == nil { Artist.new (name) }
+    Artist.new (name) unless @@all.find {|artist| artist == name} .include? name
   end
     
 end
