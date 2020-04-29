@@ -26,7 +26,7 @@ class Artist
     if find_artist != nil 
       find_artist
     else 
-      Artist.new (name)
+      Artist.new (self)
     end
   end
     
